@@ -1,1 +1,66 @@
-<p>Add Expense</p>
+<h1>Add Expense</h1>
+
+<!--
+   ng-submit="submit()" method="post"
+    <input type="Submit" value="Submit" class="right" (click) = "submit()" />
+    <form></form>
+    <td>{{e.date | date : 'dd/MM/yyyy'}}</td>
+-->
+
+<table>
+  
+   <tr>
+      <th>Date</th>
+      <th>Place</th>
+      <th>Cost</th>
+      <th>Category</th>
+    </tr>
+
+    <tr>
+       <td> <input type="date" name="date" id="date" />  </td>
+       <td> <input type="text" id="place"  /></td>
+       <td> <input type="text" id="cost"  /></td>
+       <td><select  id="category">
+            <option value="food">Food</option>
+            <option value="grocery">Grocery</option>
+            <option value="health">Health</option>
+            <option value="household">Household</option>
+            <option value="transportation">Transportation</option>
+            <option value="Personal">Personal</option>
+            <option value="electronics">Electronics</option>
+            <option value="Misc">Misc</option>
+          </select></td>
+          <button class="right" (click)="submit()">Submit</button>
+    </tr>
+    
+
+  </table> 
+
+
+
+  <table>
+  
+    <tr>
+       <th>Date</th>
+       <th>Place</th>
+       <th>Cost</th>
+       <th>Category</th>
+       <th>Delete</th>
+     </tr>
+ 
+     <tr *ngFor="let val of rolelist; let i = index">   
+     
+              <td>{{ val.date}}</td>
+              <td>{{ val.place}}</td>
+              <td>{{ val.cost}}</td>
+              <td>{{ val.category}}</td>
+              <td><button (click) = "delete(i)">Delete</button></td>
+        </tr>
+     
+     
+ 
+   </table> 
+ 
+
+
+
