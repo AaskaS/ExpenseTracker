@@ -9,9 +9,4 @@
 -->
 
 
-<div nz-row>
-    <div nz-col nzSpan="12">
-        <div id="chart1" echarts [options]="options" theme="macarons" class="demo-chart"></div>
-    </div>
-
-</div>
+<div echarts [options]="options" [loading]="true"  class="chart-requesttype"></div>
