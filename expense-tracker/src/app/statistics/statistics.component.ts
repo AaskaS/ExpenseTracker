@@ -9,8 +9,7 @@ import { getInstanceByDom, connect } from 'echarts';
 export class StatisticsComponent implements OnInit {
   public options = {
     tooltip : {
-      trigger: 'item',
-      formatter: "{a} <br/>{b} : {c} ({d}%)"
+      formatter: "{b} : ${c} ({d}%)"
     },
     legend: {
       orient: 'vertical',
@@ -19,10 +18,10 @@ export class StatisticsComponent implements OnInit {
     },
     series : [
       {
-        name: 'Number of Requests by Request Type',
+        //name: 'Number of Requests by Request Type',
         type: 'pie',
-        radius : '75%',
-        center: ['50%', '60%'],
+        radius : '90%',
+       // center: ['50%', '60%'],
         data:[
           {value:335, name:'Food'},
           {value:310, name:'Grocery'},
@@ -50,13 +49,7 @@ export class StatisticsComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    setTimeout(() => {
-      const chartElement1 = document.getElementById('chart1');
-      //const chartElement2 = document.getElementById('chart2');
-      const chart1 = getInstanceByDom(chartElement1);
-      //const chart2 = getInstanceByDom(chartElement2);
-      //connect([chart1, chart2]);
-    });
+    
   }
 }
 
