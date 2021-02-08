@@ -1,3 +1,3 @@
 # ExpenseTracker
 
-- firebase.auth() is not working on Signup component
+- run `npm start` to start project on `localhost:4200`
