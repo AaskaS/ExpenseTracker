@@ -7,16 +7,23 @@ import { AddExpenseComponent } from './add-expense/add-expense.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     AddExpenseComponent,
     WelcomeComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    SigninComponent,
+    SignupComponent
     
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

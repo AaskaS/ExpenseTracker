@@ -1,21 +1,21 @@
 
 
-<form [formGroup]="signup">
+<form [formGroup]="signup" >
 
     <div>
         <h1>Sign Up</h1>
     </div>
 
     <div>
-        <input type="email" placeholder="Email" />
+        <input type="email" placeholder="Email" formControlName="email" ng-requred="true" />
     </div>
 
     <div>
-        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Password" formControlName="password" ng-required="true" />
     </div>
 
     <div>
-        <button (click)="submit()">Register</button>
+        <button (click)="createUser(signup.value)"  type="submit">Register</button>
     </div>
 
 

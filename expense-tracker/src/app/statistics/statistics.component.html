@@ -9,4 +9,46 @@
 -->
 
 
-<div echarts [options]="options" [loading]="true"  ></div>
+<div echarts [options]="options" [loading]="true"   ></div>
+
+<!--
+<table>
+
+    <tr>
+      <th>Date</th>
+      <th>Place</th>
+      <th>Cost</th>
+      <th>Category</th>
+    </tr>
+  
+    <tr *ngFor="let val of expense">
+
+      <td>{{ val.date}}</td>
+      <td>{{ val.place}}</td>
+      <td>{{ val.cost}}</td>
+      <td>{{ val.category}}</td>
+    </tr>
+  
+  
+  
+  </table>
+-->
+
+  <table>
+
+    <tr>
+      <th>Category</th>
+      <th>Cost</th>      
+    </tr>
+  
+    <tr *ngFor="let val of temp | keyvalue">
+      <td>{{ val.key}}</td>
+      <td>{{ val.value.toFixed(2)}}</td>
+      
+    </tr>
+  
+  
+  
+  </table>
+
+
